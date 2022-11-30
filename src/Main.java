@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -8,7 +9,6 @@ public class Main {
         List<String> products = new ArrayList<>();
 
         Scanner scaner = new Scanner(System.in);
-
 
 
         while (true) {
@@ -44,16 +44,16 @@ public class Main {
                     String delete = scaner.nextLine();
                     try {
 
-                    int x = Integer.parseInt(delete) - 1;
+                        int x = Integer.parseInt(delete) - 1;
                         System.out.println("Покупка: " + (x + 1) + " удалена");
-                    products.remove(x);
+                        products.remove(x);
 
-                     } catch (NumberFormatException e) {
-                     System.out.println("Покупка: " + delete + " удалена");
+                    } catch (NumberFormatException e) {
+                        System.out.println("Покупка: " + delete + " удалена");
 
-                     }finally {
-                    products.remove(delete);
-                     }
+                    } finally {
+                        products.remove(delete);
+                    }
 
 
                     break;
@@ -64,26 +64,18 @@ public class Main {
                     for (int i = 0; i < products.size(); i++) {
                         String itemLower = products.get(i).toLowerCase();
 
-                        if(itemLower.contains(queryLower)) {
+                        if (itemLower.contains(queryLower)) {
                             System.out.println((i + 1) + "." + products.get(i));
                             continue;
-                        }else {
+                        } else {
                             System.out.println("Такой товар не найден");
 
 
                         }
-                    break;
-
-
-
-
+                        break;
 
 
                     }
-
-
-
-
 
 
             }
@@ -95,8 +87,7 @@ public class Main {
     }
 
 
-
-    }
+}
 
 
 
