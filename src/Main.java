@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -29,8 +28,8 @@ public class Main {
             switch (operation) {
                 case 1:
                     System.out.println("Введите наименование товара который хотите добавить");
-
                     products.add(scaner.nextLine());
+
                     System.out.println("Итого покупок в списке:" + products.size());
                     break;
 
@@ -42,18 +41,18 @@ public class Main {
 
                 case 3:
                     System.out.println("Введите номер или название товара для удаления");
-                    String s = scaner.nextLine();
+                    String delete = scaner.nextLine();
                     try {
 
-                    int x = Integer.parseInt(s) - 1;
+                    int x = Integer.parseInt(delete) - 1;
                         System.out.println("Покупка: " + (x + 1) + " удалена");
                     products.remove(x);
 
                      } catch (NumberFormatException e) {
-                     System.out.println("Покупка: " + s + " удалена");
+                     System.out.println("Покупка: " + delete + " удалена");
 
                      }finally {
-                    products.remove(s);
+                    products.remove(delete);
                      }
 
 
